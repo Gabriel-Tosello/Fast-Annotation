@@ -1,7 +1,7 @@
 body
 {
-    background-image: url("C:/wamp64/www/fastnode/img/iphone.jpg");
-    max-height: 667px;
+    background-image: url('C:/wamp64/www/fastnode/img/iphone.jpg');
+    background-size: cover;
 }
 
 h1
@@ -12,9 +12,14 @@ h1
 
 h3
 {
-    color: #3919A9;
-    margin-top: -100px;
     position: fixed;
+    font-size: 1.75rem;
+}
+
+img
+{
+    display: block;
+    width: 100%;
 }
 
 .div
@@ -60,14 +65,20 @@ h3
 
 .cancelar
 {
-    background-color:rgb(56, 182, 255);
+    font-size: 30px;
+    height: 50px;
+    background-color: rgb(56, 182, 255);
     border: 1px solid rgb(56, 182, 255);
 }
 
 .criar
 {
-    background-color:rgb(56, 182, 255);
+    font-size: 30px;
+    height: 50px;
+    background-color: rgb(56, 182, 255);
     border: 1px solid rgb(56, 182, 255);
+    width: 100px;
+    margin-left: 1.5em;
 }
 
 .areatexto
@@ -79,9 +90,10 @@ h3
 
 .estilo
 {
+    margin-top: 70px;
     position: fixed;
     align-self: flex-start;
-    padding: 80px;
+    padding: 10px;
     display: inline-block;
     cursor: pointer;
 }
@@ -90,7 +102,7 @@ h3
 {
     position: fixed;
     align-self: flex-end;
-    padding: 60px;
+    padding: 40px;
     display: inline-block;
     cursor: pointer;
 }
@@ -104,4 +116,23 @@ h3
 {
      font-style: italic; 
 }
+
+.sublinhado
+{
+    text-decoration: underline; 
+}
+
+.menu
+{
+    display: none;
+    position: fixed;
+    width: 200px;
+    height: 667px;
+    padding: 5px 2px;
+    margin: 0px;
+    background-color: rgb(56, 182, 255);
+}
+
+
+
 

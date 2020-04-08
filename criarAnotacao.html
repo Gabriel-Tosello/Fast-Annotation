@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastNote</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -17,14 +17,15 @@
     <div class="estilo">
         <button class="negrito"><i class="fa fa-bold" aria-hidden="true"></i></button>
         <button class="italico"><i class="fa fa-italic" aria-hidden="true"></i></button>
+        <button class="sublinhado"><i class="fa fa-underline" aria-hidden="true"></i></button>
     </div>
 
         <textarea class="areatexto" name="" id="" cols="30" rows="18"></textarea>
   
-        <div class="botoes">
-        <button class="cancelar">Cancelar</button>
-        <button class="criar">Criar</button>
-        </div>
+    <div class="botoes">
+    <button class="cancelar">Cancelar</button>
+    <button class="criar">Criar</button>
+    </div>
 
     </div>
 
@@ -44,6 +45,12 @@
 <script>
     $(".italico").click(function() {
         $(".areatexto").toggleClass("italico");
+    });
+</script>
+
+<script>
+    $(".sublinhado").click(function() {
+        $(".areatexto").toggleClass("sublinhado");
     });
 </script>
 
