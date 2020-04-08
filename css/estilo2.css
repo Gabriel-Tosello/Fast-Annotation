@@ -1,0 +1,143 @@
+body
+{
+    background-image: url("C:/wamp64/www/fastnode/img/iphone.jpg");
+    max-height: 667px;
+}
+
+h1
+{
+    color: #fff;
+    text-align: center;
+}
+
+h2
+{
+    color: black;
+    text-align: center;
+}
+
+h3
+{
+    color: black;
+    margin-top: -100px;
+    position: fixed;
+}
+
+h4
+{
+    color: black;
+
+}
+
+.div
+{
+    display: flex;
+    width: 100%;
+    height: 667px;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao
+{
+    width: 120px;
+    height: 120px;
+    position: fixed;
+}
+
+.btn-primary
+{
+    background-color: rgb(56, 182, 255);
+    border:rgb(56, 182, 255);
+}
+
+.btn_menu {
+
+    display: block;
+    width: 70px; 
+    height: 70px;
+    float: right; 
+    cursor: pointer;
+    background-color:#fff;
+    margin: 5px;
+    border: 1px double #fff;
+    position: fixed;
+
+}
+
+.icone
+{
+    color: rgb(56, 182, 255);
+}
+
+.button1
+{
+    background-color: #fff;
+    border: 3px solid gray;
+    font-size: 15px;
+    width: 110px;
+    margin-left: 1.5em;
+
+}
+
+.button2
+{
+    background-color:rgb(56, 182, 255);
+    border: 1px solid rgb(56, 182, 255);
+    font-size: 30px;
+    margin-top: 5px;
+    width: 300px;
+    height: 50px;
+}
+
+.areatexto
+{
+    resize: none;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.areatexto2
+{
+    resize: none;
+    width: 300px;
+    height: 40px;
+    border: 5px solid gray;
+}
+
+.areatexto3
+{
+    resize: none;
+    width: 300px;
+    height: 80px;
+    border: 5px solid gray;
+}
+
+.estilo
+{
+    position: fixed;
+    align-self: flex-start;
+    padding: 80px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.botoes
+{
+    position: fixed;
+    align-self: flex-end;
+    padding: 60px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.negrito 
+{ 
+    font-weight: bold; 
+}
+
+.italico 
+{
+     font-style: italic; 
+}
+
