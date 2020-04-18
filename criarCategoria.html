@@ -10,7 +10,15 @@
 </head>
 <body>
 
-    <button class="btn_menu"><i class="fa fa-bars fa-5x icone"></i></button>
+    <button class="btn_menu" onclick="abrirMenu()"><i class="fa fa-bars fa-5x icone"></i></button>
+    <nav class="menu">
+        <a class="btn_close"><i class="fa fa-times"></i></a>
+            <ul>
+                <li>Criar anotação</li>
+                <li>Criar categoria</li>
+                <li>Criar lista/tarefa</li>
+            </ul>
+    </nav>
 
     <div class="container">
         <div class="cate">   
@@ -42,15 +50,13 @@
 <script src="https://use.fontawesome.com/aac5c45839.js"></script>
 
 <script>
-    $(".negrito").click(function() {
-        $(".areatexto").toggleClass("negrito");
-    });
-</script>
 
-<script>
-    $(".italico").click(function() {
-        $(".areatexto").toggleClass("italico");
-    });
+    $(".btn_menu").click(function() {
+    
+    $(".menu").show();
+    
+    })
+    
 </script>
 
 <script>
