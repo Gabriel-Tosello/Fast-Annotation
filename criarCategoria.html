@@ -14,32 +14,45 @@
     <nav class="menu">
         <a class="btn_close"><i class="fa fa-times"></i></a>
             <ul>
-                <li>Criar anotaÃ§Ã£o</li>
+                <li>Criar anotação</li>
                 <li>Criar categoria</li>
                 <li>Criar lista/tarefa</li>
             </ul>
     </nav>
 
     <div class="container">
+
         <div class="cate">   
-            <h4>Digite um Nome:</h4>
+
+            <h2>Categoria</h2>
+
+            <h4>Digite um nome:</h4>
     
-            <textarea class="areatexto2" name="" id="" cols="30" rows="18"></textarea>
+            <input class="areatexto2 form-control" name="" id=""></textarea>
 
-            <h4>Digite a DescriÃ§Ã£o:</h4>
+            <h4>Digite a descrição:</h4>
 
-            <textarea class="areatexto3" name="" id="" cols="30" rows="18"></textarea>
+            <textarea class="areatexto3 form-control" name="" id="" cols="30" rows="2"></textarea>
 
-            
-    
+            <h4>Escolha uma cor:</h4>
 
+            <div class="quadrados">
+                <input type="button" value="" class="quadrado_cor verde">
+                <input type="button" value="" class="quadrado_cor vermelho">
+                <input type="button" value="" class="quadrado_cor azul">
+                <input type="button" value="" class="quadrado_cor amarelo">
+                <input type="button" value="" class="quadrado_cor laranja">
+            </div>
+
+            <br>
 
             <div class="botoes">
 
                 <button class="button2">Criar Categoria</button>
 
-             </div>
+            </div>
         </div>
+
     </div>
 
 </body>
@@ -56,10 +69,7 @@
     $(".menu").show();
     
     })
-    
-</script>
 
-<script>
     $('.cancelar').click(function(){
         window.location.href = "index.html";
     });
