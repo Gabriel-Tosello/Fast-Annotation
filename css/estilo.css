@@ -22,6 +22,42 @@ img
     width: 100%;
 }
 
+ul 
+{
+    padding: 25px;
+}
+
+ul li
+{
+    list-style: none;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+ul li a:link
+{
+    text-decoration: none;
+    color: #130400;
+}
+
+ul li a:visited
+{
+    text-decoration: none;
+    color: #130400;
+}
+
+.menu
+{
+    display: none;
+    position: absolute;
+    width: 250px;
+    height: 667px;
+    padding: 5px 2px;
+    margin: 0px;
+    background-color: rgb(56, 182, 255);
+    z-index: 1;
+}
+
 .lista{
     padding-top: 20%;
 }
@@ -61,6 +97,19 @@ img
     position: fixed;
 
 }
+
+.btn_close
+{
+    display: block;
+    width: 70px; 
+    height: 70px;
+    float: right; 
+    cursor: pointer;
+    margin: 5px;
+    position: fixed;
+    border: 1px double rgb(56, 182, 255);
+}
+
 
 .icone
 {
@@ -171,17 +220,6 @@ img
 .sublinhado
 {
     text-decoration: underline; 
-}
-
-.menu
-{
-    display: none;
-    position: fixed;
-    width: 200px;
-    height: 667px;
-    padding: 5px 2px;
-    margin: 0px;
-    background-color: rgb(56, 182, 255);
 }
 
 
