@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastNote</title>
+    <title>Fast Annotation</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +15,7 @@
     <button class="btn_menu" onclick="abrirMenu()"><i class="fa fa-bars fa-5x icone"></i></button>
 
     <nav class="menu">
-        <a class="btn_close"><i class="fa fa-times"></i></a>
+        <a class="btn_close" onclick="fecharMenu()"><i class="fa fa-times"></i></a>
         <ul>
             <li>Criar anotaÃ§Ã£o</li>
             <li>Criar categoria</li>
@@ -23,7 +23,7 @@
         </ul>
     </nav>
 
-    <h3 class="titulo">Crie uma anotação</h3>
+    <h3 class="titulo">Crie uma anotaï¿½ï¿½o</h3>
 
     <div class="corpo">
 
@@ -42,9 +42,15 @@
 
 <script>
 
-    $(".btn_menu").click(function () {
+    $(".btn_menu").click(function abrirMenu() {
 
         $(".menu").show();
+
+    })
+
+    $(".btn_close").click(function fecharMenu() {
+
+    $(".menu").hide();
 
     })
 
