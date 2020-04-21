@@ -61,6 +61,22 @@ h4
     color: black;
 }
 
+.anotacoes_div
+{
+    text-align: -webkit-center;
+}
+
+.quadrado_anotacao
+{
+    border: 4px solid;
+    border-color: red;
+    width: 70%;
+    height: 100px;
+    margin-top: 35px;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
 .areatexto2
 {
     resize: none;
