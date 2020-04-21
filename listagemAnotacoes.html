@@ -20,11 +20,56 @@
             </ul>
     </nav>
 
-    <div class="container">
+    <br><br><br>
 
-        UOU
+        <div class="anotacoes_div">
 
-    </div>
+            <div class="quadrado_anotacao">
+                <div class="row">
+                    <div class="col-sm">
+                        <h4>Titulo</h3>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-sm">
+                        <h5>Categoria</h5>
+                        <h6>21/04/2020</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="quadrado_anotacao">
+                <div class="row">
+                    <div class="col-sm">
+                        <h4>Titulo</h3>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-sm">
+                        <h5>Categoria</h5>
+                        <h6>21/04/2020</h6>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="quadrado_anotacao">
+                <div class="row">
+                    <div class="col-sm">
+                        <h4>Titulo</h3>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-sm">
+                        <h5>Categoria</h5>
+                        <h6>21/04/2020</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>    
 
 </body>
 
@@ -37,9 +82,13 @@
 
     $(".btn_menu").click(function() {
     
-    $(".menu").show();
+        $(".menu").show();
     
     })
+
+    $(".quadrado_anotacao").click(function(){
+        window.open('visualizarAnotacao.html', '_self');
+    });
 
     $('.cancelar').click(function(){
         window.location.href = "index.html";
