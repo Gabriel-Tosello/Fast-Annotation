@@ -1,6 +1,6 @@
 body
 {
-    background-image: url('C:/wamp64/www/fastnode/img/iphone.jpg');
+    background-image: url('../img/8.jpg');
     background-size: cover;
 }
 
@@ -102,6 +102,7 @@ img
 
 .areatexto3
 {
+    opacity: 0.8;
     resize: none;
     width: 300px;
     height: 80px;

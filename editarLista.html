@@ -22,30 +22,23 @@
 
     <div class="container">
 
-        <div class="lista">
-            <br>
+        <div class="lista">   
 
             <form action="" method="post">
 
-                <h3>Editar anotação</h3>
-        
+                <h2>Editar Lista/Tarefa</h2>
+
                 <h4>Nome:</h4>
         
-                <input class="areatexto2 form-control" name="" id="" value="Nome anterior">
+                <input class="areatexto2 form-control" name="" value="Nome anterior">
 
-                <h4>Digite uma descrição:</h4>
+                <h4>Descrição:</h4>
 
-                <textarea class="areatexto2 form-control" name="" value="Descrição anterior" cols="30" rows="1"></textarea>
+                <textarea class="areatexto2 form-control" name="" value="Descrição" cols="30" rows="1"></textarea>
 
-                <h4>Digite o conteúdo:</h4>
+                <h4>Conteúdo:</h4>
 
-                <div class="estilo">
-                    <button class="negrito"><i class="fa fa-bold" aria-hidden="true"></i></button>
-                    <button class="italico"><i class="fa fa-italic" aria-hidden="true"></i></button>
-                    <button class="sublinhado"><i class="fa fa-underline" aria-hidden="true"></i></button>
-                </div>
-
-                <textarea class="areatexto3 form-control" name="" value="Conteúdo anterior" cols="30" rows="7"></textarea>
+                <textarea class="areatexto3 form-control" name="" value="Conteúdo" cols="30" rows="6"></textarea>
 
                 <div class="botoes">
 
@@ -60,8 +53,9 @@
                     </div>
                 
                 </div>
-
+        
             </form>
+
         </div>
     </div>
 
@@ -73,17 +67,12 @@
 <script src="https://use.fontawesome.com/aac5c45839.js"></script>
 
 <script>
-    $(".negrito").click(function () {
-        $(".areatexto3").toggleClass("negrito");
-    });
 
-    $(".italico").click(function () {
-        $(".areatexto3").toggleClass("italico");
-    });
-
-    $(".sublinhado").click(function () {
-        $(".areatexto3").toggleClass("sublinhado");
-    });
+    $(".btn_menu").click(function() {
+    
+    $(".menu").show();
+    
+    })
 
     $('.cancelar').click(function(){
         window.location.href = "index.html";

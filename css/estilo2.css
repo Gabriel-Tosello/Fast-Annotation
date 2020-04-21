@@ -1,16 +1,7 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    outline: none;
-}
-
 body
 {
-    background-image: url('C:/wamp64/www/fastnode/img/iphone.jpg');
-    overflow: hidden;
-    max-height: 667px;
-    background: white;
+    background-image: url('../img/8.jpg');
+    background-size: cover;
     font-family: serif;
 }
 
@@ -80,6 +71,7 @@ h4
 
 .areatexto3
 {
+    opacity: 0.8;
     resize: none;
     width: 300px;
     height: 80px;

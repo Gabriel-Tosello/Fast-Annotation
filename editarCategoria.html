@@ -22,47 +22,42 @@
 
     <div class="container">
 
-        <div class="lista">
-            <br>
+        <div class="cate">   
 
             <form action="" method="post">
 
-                <h3>Editar anotação</h3>
-        
+                <h2>Editar categoria</h2>
+
                 <h4>Nome:</h4>
         
-                <input class="areatexto2 form-control" name="" id="" value="Nome anterior">
+                <input class="areatexto2 form-control" name="" value="Nome anterior">
 
-                <h4>Digite uma descrição:</h4>
+                <h4>Descrição:</h4>
 
-                <textarea class="areatexto2 form-control" name="" value="Descrição anterior" cols="30" rows="1"></textarea>
+                <textarea class="areatexto3 form-control" name="" value="Descrição" cols="30" rows="2"></textarea>
 
-                <h4>Digite o conteúdo:</h4>
+                <h4>Escolha uma cor:</h4>
 
-                <div class="estilo">
-                    <button class="negrito"><i class="fa fa-bold" aria-hidden="true"></i></button>
-                    <button class="italico"><i class="fa fa-italic" aria-hidden="true"></i></button>
-                    <button class="sublinhado"><i class="fa fa-underline" aria-hidden="true"></i></button>
+                <div class="quadrados">
+                    <input type="button" value="" class="quadrado_cor verde">
+                    <input type="button" value="" class="quadrado_cor vermelho">
+                    <input type="button" value="" class="quadrado_cor azul">
+                    <input type="button" value="" class="quadrado_cor amarelo">
+                    <input type="button" value="" class="quadrado_cor laranja">
                 </div>
 
-                <textarea class="areatexto3 form-control" name="" value="Conteúdo anterior" cols="30" rows="7"></textarea>
+                <br>
 
                 <div class="botoes">
 
-                    <button class="button1">Selecionar Categoria</button>
+                    <button class="button2">Salvar</button>
 
-                    <button class="button1">Nova Categoria</button>
-
-                    <div>
-
-                        <button class="button2">Salvar</button>
-
-                    </div>
-                
                 </div>
-
+        
             </form>
+
         </div>
+
     </div>
 
 </body>
@@ -73,17 +68,12 @@
 <script src="https://use.fontawesome.com/aac5c45839.js"></script>
 
 <script>
-    $(".negrito").click(function () {
-        $(".areatexto3").toggleClass("negrito");
-    });
 
-    $(".italico").click(function () {
-        $(".areatexto3").toggleClass("italico");
-    });
-
-    $(".sublinhado").click(function () {
-        $(".areatexto3").toggleClass("sublinhado");
-    });
+    $(".btn_menu").click(function() {
+    
+    $(".menu").show();
+    
+    })
 
     $('.cancelar').click(function(){
         window.location.href = "index.html";
