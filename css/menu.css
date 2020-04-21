@@ -1,0 +1,74 @@
+ul 
+{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+ul li
+{
+    grid-column: 1/2;
+    list-style: none;
+    font-size: 22px;
+    margin-top: 10px;
+    float: left;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul li a:link
+{
+    text-decoration: none;
+    color: #130400;
+}
+
+ul li a:visited
+{
+    text-decoration: none;
+    color: #130400;
+}
+
+.menu
+{
+    display: none;
+    position: absolute;
+    width:250px;
+    height: 667px;
+    padding: 5px 2px;
+    margin: 0px;
+    background-color: rgb(56, 182, 255);
+    z-index: 1;
+}
+
+.btn_menu {
+
+    display: block;
+    width: 70px; 
+    height: 70px;
+    float: right; 
+    cursor: pointer;
+    background-color:#fff;
+    margin: 5px;
+    border: 1px double #fff;
+    position: fixed;
+
+}
+
+.btn_close
+{
+    display: block;
+    width: 70px; 
+    height: 70px;
+    float: right; 
+    cursor: pointer;
+    margin: 5px;
+    position: fixed;
+    border: 1px double rgb(56, 182, 255);
+}
+
+.menu img
+{
+    display: block;
+    width: 40px;
+    align-self: center;
+}
