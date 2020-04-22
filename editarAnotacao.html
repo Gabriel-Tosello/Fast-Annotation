@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastNote</title>
+    <title>FastAnnotation</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/estilo2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-    <button class="btn_menu" onclick="abrirMenu()"><i class="fa fa-bars fa-5x icone"></i></button>
+    <button class="btn_menu"><i class="fa fa-bars fa-5x icone"></i></button>
     <nav class="menu">
-        <a class="btn_close"><i class="fa fa-times"></i></a>
-            <ul>
-                <li>Criar anotação</li>
-                <li>Criar categoria</li>
-                <li>Criar lista/tarefa</li>
-            </ul>
+        <a class="btn_close"><i class="fa fa-bars fa-5x"></i></a>
+        <br><br>
+        <ul>
+            <li><a href="criarAnotacao.html">Criar uma anotaÃ§Ã£o</a></li><img src="img/Note01.PNG">
+            <li><a href="criarCategoria.html">Criar uma categoria</a></li><img src="img/Note02.png">
+            <li><a href="criarLista.html">Criar lista/tarefas</a></li><img src="img/Note03.png">
+            <li><a href="listagemAnotacoes.html">AnotaÃ§Ãµes</a></li>
+            <li><a href="listagemTarefas.html">Lista/Tarefas</a></li>
+            <li><a href="criarCategoria.html">Categorias</a></li>
+        </ul>
     </nav>
 
     <div class="container">
@@ -27,17 +32,17 @@
 
             <form action="" method="post">
 
-                <h5>Editar anotação</h5>
+                <h5>Editar anotaï¿½ï¿½o</h5>
         
                 <h4>Nome:</h4>
         
                 <input class="areatexto2 form-control" name="" id="" value="Nome anterior">
 
-                <h4>Digite uma descrição:</h4>
+                <h4>Digite uma descriï¿½ï¿½o:</h4>
 
-                <textarea class="areatexto2 form-control" name="" value="Descrição anterior" cols="30" rows="1"></textarea>
+                <textarea class="areatexto2 form-control" name="" value="Descriï¿½ï¿½o anterior" cols="30" rows="1"></textarea>
 
-                <h4>Digite o conteúdo:</h4>
+                <h4>Digite o conteï¿½do:</h4>
 
                 <div class="estilo">
                     <button class="negrito"><i class="fa fa-bold" aria-hidden="true"></i></button>
@@ -45,7 +50,7 @@
                     <button class="sublinhado"><i class="fa fa-underline" aria-hidden="true"></i></button>
                 </div>
 
-                <textarea class="areatexto3 form-control" name="" value="Conteúdo anterior" cols="30" rows="6"></textarea>
+                <textarea class="areatexto3 form-control" name="" value="Conteï¿½do anterior" cols="30" rows="6"></textarea>
 
                 <div class="botoes">
 
@@ -73,6 +78,19 @@
 <script src="https://use.fontawesome.com/aac5c45839.js"></script>
 
 <script>
+    
+    $(".btn_menu").click(function abrirMenu() {
+
+    $(".menu").show();
+
+    })
+
+    $(".btn_close").click(function fecharMenu() {
+
+    $(".menu").hide();
+
+    })
+
     $(".negrito").click(function () {
         $(".areatexto3").toggleClass("negrito");
     });

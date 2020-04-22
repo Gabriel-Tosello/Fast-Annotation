@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastNote</title>
+    <title>FastAnnotation</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/estilo2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-    <button class="btn_menu" onclick="abrirMenu()"><i class="fa fa-bars fa-5x icone"></i></button>
+    <button class="btn_menu"><i class="fa fa-bars fa-5x icone"></i></button>
     <nav class="menu">
-        <a class="btn_close"><i class="fa fa-times"></i></a>
-            <ul>
-                <li>Criar anota��o</li>
-                <li>Criar categoria</li>
-                <li>Criar lista/tarefa</li>
-            </ul>
+        <a class="btn_close"><i class="fa fa-bars fa-5x"></i></a>
+        <br><br>
+        <ul>
+            <li><a href="criarAnotacao.html">Criar uma anotação</a></li><img src="img/Note01.PNG">
+            <li><a href="criarCategoria.html">Criar uma categoria</a></li><img src="img/Note02.png">
+            <li><a href="criarLista.html">Criar lista/tarefas</a></li><img src="img/Note03.png">
+            <li><a href="listagemAnotacoes.html">Anotações</a></li>
+            <li><a href="listagemTarefas.html">Lista/Tarefas</a></li>
+            <li><a href="criarCategoria.html">Categorias</a></li>
+        </ul>
     </nav>
 
     <br><br><br>
@@ -80,10 +85,16 @@
 
 <script>
 
-    $(".btn_menu").click(function() {
-    
-        $(".menu").show();
-    
+    $(".btn_menu").click(function abrirMenu() {
+
+    $(".menu").show();
+
+    })
+
+    $(".btn_close").click(function fecharMenu() {
+
+    $(".menu").hide();
+
     })
 
     $(".quadrado_anotacao").click(function(){
