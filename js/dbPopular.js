@@ -2,7 +2,7 @@
 
     'use strict';
   
-    var lastId = 0;
+    var lastId = localStorage.getItem("PAnotacao");;
     var taskWrapper = document.getElementById("task_wrapper");
     var btnSave = document.getElementById("save_task");
     var removeIcon;
@@ -31,7 +31,6 @@
     function showList() {
   
       if (!!taskList.length) {
-        getLastTaskId();
         for (var item in taskList) {
           var task = taskList[item];
           
@@ -39,7 +38,7 @@
           addTaskToList2(task);
         }
         syncEvents();
-      }
+      }      
     } 
 
     function showList2() {
@@ -72,20 +71,20 @@
   
      function addTaskToList(task) {
   
-      var removeIcon = document.createElement('span');
-      var element = document.createElement('li');
-      var updateIcon = document.createElement('span');
+      //var removeIcon = document.createElement('span');
+      //var element = document.createElement('li');
+      var updateIcon = document.getElementById("desc");
   
-      removeIcon.innerHTML = "Deletar |";
-      removeIcon.className = "remove_item clickeable";
-      removeIcon.setAttribute("title", "Remove");
+      //removeIcon.innerHTML = "Deletar |";
+      //removeIcon.className = "remove_item clickeable";
+      //removeIcon.setAttribute("title", "Remove");
   
-      updateIcon.innerHTML = " Atualizar | ";
-      updateIcon.className = "update_icon clickeable";
+      //updateIcon.innerHTML = " Atualizar | ";
+      //updateIcon.className = "update_icon clickeable";
       updateIcon.setAttribute("title", "Update");
   
   
-      element.appendChild(removeIcon);
+      //element.appendChild(removeIcon);
       element.appendChild(updateIcon);
       element.setAttribute("id", task.taskId);
       element.innerHTML += task.taskDes;
@@ -93,40 +92,32 @@
     } 
 
     function addTaskToList2(task) {
-  
-      //var removeIcon = document.createElement('br');
-      var element = document.createElement('button');
-      //var updateIcon = document.createElement('br');
-      //element.appendChild(removeIcon);
-      //element.appendChild(updateIcon);
-      element.setAttribute("class", "quadrado_anotacao");
-      element.setAttribute("id", task.taskId);
-      element.innerHTML += task.taskDes;
-      taskWrapper.appendChild(element);
+      if(task.taskId == lastId){
+        document.getElementById("desc").value = task.taskDes;
+        document.getElementById("cont").value = task.taskState;
+      }
+      var updateIcon = document.getElementById("edit");
+      updateIcon.setAttribute("title", "Update");
     }
   
     function updateTask(event) {
   
-      var taskTag = event.currentTarget.parentNode;
-      var taskId = taskTag.id;
+      var taskId = lastId;
       var taskToUpdate = findTask(taskId).task;
       var pos = findTask(taskId).pos;
       if (!!taskToUpdate) {
-        var des = prompt("Task Description", taskToUpdate.taskDes);
-        var state = prompt("Task State", taskToUpdate.taskState);
+        var des = document.getElementById("desc").value;
+        var state = document.getElementById("cont").value;
         taskToUpdate.taskDes = des;
         taskToUpdate.taskState = state;
         taskList[pos] = taskToUpdate;
-        taskTag.lastChild.textContent = taskToUpdate.taskDes;
         syncTask();
       }
     }
   
     function removeTask(event) {
   
-      var taskToRemove = event.currentTarget.parentNode;
-      var taskId = taskToRemove.id;
-      taskWrapper.removeChild(taskToRemove);
+      var taskId = lastId;
       taskList.forEach(function(value, i) {
         if (value.taskId == taskId) {
           taskList.splice(i, 1);
@@ -134,6 +125,7 @@
       })
   
       syncTask();
+      window.open('listagemAnotacoes.html', '_self');
     }
   
     // End CRUD
@@ -147,15 +139,10 @@
       taskList = JSON.parse(window.localStorage.getItem('taskList'));
     }
   
-    function getLastTaskId() {
-      var lastTask = taskList[taskList.length - 1];
-      lastId = lastTask.taskId + 1;
-    }
-  
     function syncEvents() {
   
-      updateIcon = document.getElementsByClassName("update_icon");
-      removeIcon = document.getElementsByClassName("remove_item");
+      updateIcon = document.getElementsByClassName("button2");
+      removeIcon = document.getElementsByClassName("btn");
       if (!!removeIcon.length) {
         for (var i = 0; i < removeIcon.length; i++) {
           removeIcon[i].addEventListener('click', removeTask);

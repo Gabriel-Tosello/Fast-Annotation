@@ -34,15 +34,16 @@
 
                 <h4>Descrição</h4>
 
-                <textarea class="areatexto2 form-control" name="" id="" cols="30" rows="1"></textarea>
+                <textarea class="areatexto2 form-control" name="" id="desc" cols="30" rows="1"></textarea>
 
                 <h4>Conteúdo</h4>
 
-                <textarea class="areatexto3 form-control" name="" id="" cols="30" rows="7"></textarea> 
+                <textarea class="areatexto3 form-control" name="" id="cont" cols="30" rows="7"></textarea> 
 
                 <div class="botoes">
 
-                    <button class="button2">Editar</button>
+                    <button class="button2" id="edit">Editar</button>
+                    <button class="btn btn-danger" id="delet">Excluir</button>
                 
                 </div>
 
@@ -50,13 +51,13 @@
     </div>
 
 </body>
-
+<script src="js/dbPopular.js"></script>
 <script src="js/jquery-3.4.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-
+    document.getElementById("desc").innerHTML = localStorage.getItem("d");
     $(".btn_menu").click(function abrirMenu() {
 
     $(".menu").show();

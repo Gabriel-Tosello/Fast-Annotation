@@ -57,8 +57,8 @@ ul li a:visited
 .btn_close
 {
     display: block;
-    width: 100px; 
-    height: 100px;
+    width: 20px; 
+    height: 20px;
     float: right; 
     cursor: pointer;
     margin: 5px;

@@ -26,10 +26,8 @@
     </nav>
 
     <br><br><br>
-
-        <div class="anotacoes_div" id="task_wrapper">
-            <div class="quadrado_anotacao" >NomeTeste</div>               
-                
+    <form></form>
+        <div class="anotacoes_div" id="task_wrapper">                           
         </div>    
 
 </body>
@@ -39,6 +37,16 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
+    // Pegar id da div clicada ---------------
+        
+        //----------------------------------------
+    var descendentes = document.querySelectorAll("#task_wrapper button");
+        for (var i = 0; i < descendentes.length; i++) {
+            descendentes[i].addEventListener("click", function (e) {
+                localStorage.setItem("PAnotacao",this.id);
+                //alert('O elemento clicado foi o ' + this.id);
+            })
+        }
 
     $(".btn_menu").click(function abrirMenu() {
 
@@ -52,7 +60,7 @@
 
     })
 
-    $(".quadrado_anotacao").click(function(){
+    $(".quadrado_anotacao").click(function(){ 
         window.open('visualizarAnotacao.html', '_self');
     });
 
