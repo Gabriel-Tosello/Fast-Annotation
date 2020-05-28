@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/estilo2.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    
 </head>
 <body>
 
@@ -30,15 +31,15 @@
         <div class="lista">
             <br>
 
-            <form action="" method="post">
+            <form onsubmit="salvarAnotacao()" action="" method="post">
         
                 <h4>Digite um Nome:</h4>
         
-                <input class="areatexto2 form-control" name="" id="">
+                <input class="areatexto2 form-control" name="" id="nome">
 
                 <h4>Digite uma descrição:</h4>
 
-                <textarea class="areatexto2 form-control" name="" id="" cols="30" rows="1"></textarea>
+                <textarea class="areatexto2 form-control" name="" id="descricao" cols="30" rows="1"></textarea>
 
                 <h4>Digite o conteúdo:</h4>
 
@@ -48,7 +49,7 @@
                     <button class="sublinhado"><i class="fa fa-underline" aria-hidden="true"></i></button>
                 </div>
 
-                <textarea class="areatexto3 form-control" name="" id="" cols="30" rows="7"></textarea>
+                <textarea class="areatexto3 form-control" name="" id="conteudo" cols="30" rows="7"></textarea>
 
                 <div class="botoes">
 
@@ -57,8 +58,8 @@
                     <button class="button1">Nova Categoria</button>
 
                     <div>
-
-                        <button class="button2">Criar anotação</button>
+                        
+                        <button id="save_task" class="button2" type="button"> Criar anotação</button>
 
                     </div>
                 
@@ -104,5 +105,5 @@
         window.location.href = "index.html";
     });
 </script>
-
+<script src="js/db.js"></script>
 </html>

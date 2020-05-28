@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/estilo2.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/db.js"></script>
 </head>
 <body>
 
@@ -29,21 +30,21 @@
 
         <div class="lista">   
 
-            <form action="" method="post">
+            <form onsubmit="salvarLista()" action="" method="post">
 
                 <h2>Lista/Tarefa</h2>
 
                 <h4>Digite um Nome:</h4>
         
-                <input class="areatexto2 form-control" name="" id="">
+                <input class="areatexto2 form-control" name="" id="nome">
 
                 <h4>Digite uma descrição:</h4>
 
-                <textarea class="areatexto2 form-control" name="" id="" cols="30" rows="1"></textarea>
+                <textarea class="areatexto2 form-control" name="" id="descricao" cols="30" rows="1"></textarea>
 
                 <h4>Digite o conteúdo:</h4>
 
-                <textarea class="areatexto3 form-control" name="" id="" cols="30" rows="6"></textarea>
+                <textarea class="areatexto3 form-control" name="" id="conteudo" cols="30" rows="6"></textarea>
 
                 <div class="botoes">
 
@@ -53,7 +54,7 @@
 
                     <div>
 
-                        <button class="button2">Criar Lista</button>
+                        <input type="submit" class="button2" value="Criar Lista">
 
                     </div>
                 
