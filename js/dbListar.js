@@ -34,7 +34,8 @@
         getLastTaskId();
         for (var item in taskList) {
           var task = taskList[item];
-          addTaskToList(task);
+          //addTaskToList(task);
+          addTaskToList2(task);
         }
         syncEvents();
       }
@@ -76,6 +77,20 @@
       element.innerHTML += task.taskDes;
       taskWrapper.appendChild(element);
     } 
+
+    function addTaskToList2(task) {
+  
+      //var removeIcon = document.createElement('td');
+      var element = document.createElement('div');
+      //var updateIcon = document.createElement('td');
+  
+      //element.appendChild(removeIcon);
+      //element.appendChild(updateIcon);
+      //element.setAttribute("id", task.taskId);
+      element.setAttribute("class", "quadrado_anotacao");
+      element.innerHTML += task.taskDes;
+      taskWrapper.appendChild(element);
+    }
   
     function updateTask(event) {
   

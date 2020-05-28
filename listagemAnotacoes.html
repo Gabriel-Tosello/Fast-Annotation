@@ -11,9 +11,9 @@
 </head>
 <body>
 
-    <button class="btn_menu"><i class="fa fa-bars fa-5x icone"></i></button>
+    <button class="btn_menu"><img src="img/cardapioazul.png"></button>
     <nav class="menu">
-        <a class="btn_close"><i class="fa fa-bars fa-5x"></i></a>
+        <a class="btn_close"><img src="img/cardapiopreto.png"></a>
         <br><br>
         <ul>
             <li><a href="criarAnotacao.html">Criar uma anotação</a></li><img src="img/Note01.PNG">
@@ -27,32 +27,13 @@
 
     <br><br><br>
 
-        <div class="anotacoes_div">
-
-            <!-- <div class="quadrado_anotacao">
-                <div class="row">
-                    <div class="col-sm">
-                        <h4>Titulo</h3>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-sm">
-                        <h5>Categoria</h5>
-                        <h6>21/04/2020</h6>
-                    </div>
-                </div>
-            </div> -->
-    
-            <div id="container" >
-                <h2>Anotações</h2>
-                <ul title="Anotacao" id="task_wrapper"></ul>
-              </div>
-
+        <div class="anotacoes_div" id="task_wrapper">
+            <div class="quadrado_anotacao" >NomeTeste</div>               
+                
         </div>    
 
 </body>
-
+<script src="js/dbListar.js"></script>
 <script src="js/jquery-3.4.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -79,5 +60,5 @@
         window.location.href = "index.html";
     });
 </script>
-<script src="js/dbListar.js"></script>
+
 </html>
