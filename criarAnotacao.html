@@ -11,9 +11,9 @@
 </head>
 <body>
 
-    <button class="btn_menu"><img src="img/icons8-cardápio-48.png"></button>
+    <button class="btn_menu"><img src="img/cardapioazul.png"></button>
     <nav class="menu">
-        <a class="btn_close"><img src="img/icons8-cardápio-49.png"></a>
+        <a class="btn_close"><img src="img/cardapiopreto.png"></a>
         <br><br>
         <ul>
             <li><a href="criarAnotacao.html">Criar uma anotação</a></li><img src="img/Note01.PNG">
@@ -43,9 +43,9 @@
                 <h4>Digite o conteúdo:</h4>
 
                 <div class="estilo">
-                    <button class="negrito"><i class="fa fa-bold" aria-hidden="true"></i></button>
-                    <button class="italico"><i class="fa fa-italic" aria-hidden="true"></i></button>
-                    <button class="sublinhado"><i class="fa fa-underline" aria-hidden="true"></i></button>
+                    <button class="negrito"><img src="img/negrito.png" alt=""></button>
+                    <button class="italico"><img src="img/italico.png" alt=""></button>
+                    <button class="sublinhado"><img src="img/sublinhado.png" alt=""></button>
                 </div>
 
                 <textarea class="areatexto3 form-control" name="" id="" cols="30" rows="7"></textarea>
@@ -89,15 +89,15 @@
     })
 
     $(".negrito").click(function () {
-        $(".areatexto3").toggleClass("negrito");
+        $(".areatexto3").toggleClass(".negrito");
     });
 
     $(".italico").click(function () {
-        $(".areatexto3").toggleClass("italico");
+        $(".areatexto3").toggleClass(".italico");
     });
 
     $(".sublinhado").click(function () {
-        $(".areatexto3").toggleClass("sublinhado");
+        $(".areatexto3").toggleClass(".sublinhado");
     });
 
     $('.cancelar').click(function(){
