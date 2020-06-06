@@ -53,6 +53,7 @@
       //addTaskToList(task);
       syncEvents();
       lastId++;
+      window.open('listagemAnotacoes.html', '_self');
     }
   
     /* function addTaskToList(task) {
