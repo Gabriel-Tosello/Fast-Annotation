@@ -83,7 +83,7 @@
 
     function syncEvents() {
       updateIcon = document.getElementsByClassName("button2");
-      removeIcon = document.getElementsByClassName("btn");
+      removeIcon = document.getElementsByClassName("buttondelet");
       if (!!removeIcon.length) {
         for (var i = 0; i < removeIcon.length; i++) {
           removeIcon[i].addEventListener('click', removeTask);
