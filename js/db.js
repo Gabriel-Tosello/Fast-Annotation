@@ -52,8 +52,8 @@
       syncTask();
       //addTaskToList(task);
       syncEvents();
-      lastId++;
-      window.open('listagemAnotacoes.html', '_self');
+      lastId++;    
+      
     }
   
     /* function addTaskToList(task) {
