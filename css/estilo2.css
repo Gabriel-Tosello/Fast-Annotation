@@ -52,11 +52,12 @@ body
 h2
 {
     color: black;
-    text-align: center;
+    text-align: -webkit-center;
 }
 
 h4
 {
+    text-align: -webkit-left;
     color: black;
 }
 
@@ -128,6 +129,17 @@ h4
     margin-top: 5px;
     width: 300px;
     height: 50px;
+    cursor: pointer;
+}
+
+.button3
+{
+    background-color: rgb(52, 132, 224);
+    border: 1px solid rgb(56, 182, 255);
+    font-size: 28px;
+    margin-top: 15px;
+    width: 300px;
+    height: 45px;
     cursor: pointer;
 }
 
