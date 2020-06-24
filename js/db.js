@@ -14,21 +14,20 @@
     // Render the list
   
     function init() {
-  
       if (!!(window.localStorage.getItem('taskList'))) {
         taskList = JSON.parse(window.localStorage.getItem('taskList'));
       } else {
         taskList = [];
       }
       btnSave.addEventListener('click', saveTask);
-      //showList();
+      showList();
     }
   
     //End In
   
     //CRUD task
   
-    /* function showList() {
+       function showList() {
   
       if (!!taskList.length) {
         getLastTaskId();
@@ -39,7 +38,7 @@
         syncEvents();
       }
       
-    } */
+    } 
   
     function saveTask(event) {
   
