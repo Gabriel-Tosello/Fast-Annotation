@@ -7,17 +7,17 @@
     var btnSave = document.getElementById("save_task");
     var removeIcon;
     var updateIcon;
-    var taskList;
+    var tabLista;
   
-    // Initialize taskList 
+    // Initialize tabLista 
     // Add event to save button
     // Render the list
   
     function init() {
-      if (!!(window.localStorage.getItem('taskList'))) {
-        taskList = JSON.parse(window.localStorage.getItem('taskList'));
+      if (!!(window.localStorage.getItem('tabLista'))) {
+        tabLista = JSON.parse(window.localStorage.getItem('tabLista'));
       } else {
-        taskList = [];
+        tabLista = [];
       }
       btnSave.addEventListener('click', saveTask);
       showList();
@@ -29,10 +29,10 @@
   
        function showList() {
   
-      if (!!taskList.length) {
+      if (!!tabLista.length) {
         getLastTaskId();
-        for (var item in taskList) {
-          var task = taskList[item];
+        for (var item in tabLista) {
+          var task = tabLista[item];
           //addTaskToList(task);
         }
         syncEvents();
@@ -41,13 +41,16 @@
     } 
   
     function saveTask(event) {
-  
+      var items = [],i;
+      for( i=0; i < document.getElementsByClassName("item").length;i++) {
+        items[i] = document.getElementsByClassName("item")[i].value;
+      }
       var task = {
         taskId: lastId,
         taskDes: document.getElementById("nome").value,
-        taskState: document.getElementById("conteudo").value
+        taskState: items     
       };
-      taskList.push(task);
+      tabLista.push(task);
       syncTask();
       //addTaskToList(task);
       syncEvents();
@@ -88,7 +91,7 @@
         var state = prompt("Task State", taskToUpdate.taskState);
         taskToUpdate.taskDes = des;
         taskToUpdate.taskState = state;
-        taskList[pos] = taskToUpdate;
+        tabLista[pos] = taskToUpdate;
         taskTag.lastChild.textContent = taskToUpdate.taskDes;
         syncTask();
       }
@@ -99,9 +102,9 @@
       var taskToRemove = event.currentTarget.parentNode;
       var taskId = taskToRemove.id;
       taskWrapper.removeChild(taskToRemove);
-      taskList.forEach(function(value, i) {
+      tabLista.forEach(function(value, i) {
         if (value.taskId == taskId) {
-          taskList.splice(i, 1);
+          tabLista.splice(i, 1);
         }
       })
   
@@ -115,12 +118,12 @@
   
     function syncTask() {
   
-      window.localStorage.setItem('taskList', JSON.stringify(taskList));
-      taskList = JSON.parse(window.localStorage.getItem('taskList'));
+      window.localStorage.setItem('tabLista', JSON.stringify(tabLista));
+      tabLista = JSON.parse(window.localStorage.getItem('tabLista'));
     }
   
     function getLastTaskId() {
-      var lastTask = taskList[taskList.length - 1];
+      var lastTask = tabLista[tabLista.length - 1];
       lastId = lastTask.taskId + 1;
     }
   
@@ -146,7 +149,7 @@
         task: '',
         pos: 0
       };
-      taskList.forEach(function(value, i) {
+      tabLista.forEach(function(value, i) {
         if (value.taskId == id) {
           response.task = value;
           response.pos = i;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/estilo2.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="js/db.js"></script>
+    
 </head>
 <body>
 
@@ -29,55 +29,55 @@
     <div class="container">
 
         <div class="lista">   
-
-            <form onsubmit="salvarLista()" action="" method="post">
+            
+            
 
                 <h2>Lista/Tarefa</h2>
 
                 <h4>Digite um Nome:</h4>
         
                 <input class="areatexto2 form-control" name="" id="nome">
-
-
-                <h4>Digite o item 1:</h4>
-
-                <textarea class="areatexto2 form-control" name="" id="conteudo" cols="30" rows="1"></textarea>
-
-                <h4>Digite o item 2:</h4>
-
-                <textarea class="areatexto2 form-control" name="" id="conteudo" cols="30" rows="1"></textarea>
-
-                <h4>Digite o item 3:</h4>
-
-                <textarea class="areatexto2 form-control" name="" id="conteudo" cols="30" rows="1"></textarea>
-
-
+                    <div class="anotacoes_div" id="task_wrapper">                           
+                    </div>
                 <div class="botoes">
 
-                    <button class="button1">Selecionar Categoria</button>
-
-                    <button class="button1">Nova Categoria</button>
+                    <button class="button1">Adicionar item</button>
 
                     <div>
 
-                        <input type="submit" class="button2" value="Criar Lista/Tarefas">
+                        <button id="save_task" class="button2" type="button"> Criar Lista</button>
 
                     </div>
                 
                 </div>
         
-            </form>
+            
 
         </div>
     </div>
 
 </body>
-
+<script src="js/db2Salvar.js"></script>
 <script src="js/jquery-3.4.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <script>
+    
+    $(".button1").click(function(){
+
+      var taskWrapper = document.getElementById("task_wrapper");
+      var element = document.createElement('h4');
+      element.innerHTML += "Digite o item";
+      taskWrapper.appendChild(element);
+
+      var taskWrapper = document.getElementById("task_wrapper");
+      var element = document.createElement('textarea');
+      element.setAttribute("class", "areatexto2 form-control item");
+      element.setAttribute("cols", "30");
+      element.setAttribute("rows", "1");
+      taskWrapper.appendChild(element);
+    })
 
     $(".btn_menu").click(function abrirMenu() {
 
